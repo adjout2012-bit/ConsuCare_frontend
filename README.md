@@ -18,4 +18,4 @@ Import this repository into Vercel. `vercel.json` configures the **Other** frame
 
 ## Shared contracts
 
-`src/ConsuCare.Shared` is also copied into the backend repository. Keep DTO and model changes synchronized in both repositories when the API contract changes.
+`src/ConsuCare.Shared` is also copied into the backend repository, which is the canonical source. When the backend API contract changes, update this copy with `scripts\Sync-SharedContracts.ps1` from the backend checkout. GitHub Actions checks for contract drift after pushes to `main`.
